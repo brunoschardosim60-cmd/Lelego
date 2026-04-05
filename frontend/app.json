@@ -1,0 +1,60 @@
+{
+  "expo": {
+    "name": "LetsGo",
+    "slug": "letsgo",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "letsgo",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.letsgo.passenger",
+      "config": {
+        "googleMapsApiKey": "AIzaSyDzZhEzcXL8eyd-wm59AGu6YXJirgNQjnw"
+      },
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Precisamos da localização para encontrar motoristas próximos",
+        "NSLocationAlwaysUsageDescription": "Precisamos da localização para rastrear sua corrida"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#8B5CF6"
+      },
+      "edgeToEdgeEnabled": true,
+      "package": "com.letsgo.passenger",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION"
+      ],
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyDzZhEzcXL8eyd-wm59AGu6YXJirgNQjnw"
+        }
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#000"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
